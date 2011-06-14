@@ -1,0 +1,157 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+% Global configuration
+\documentclass[12pt,letterpaper]{article}
+\usepackage[letterpaper,margin=.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[urw-garamond]{mathdesign}
+\usepackage{mdwlist}
+\usepackage{textcomp}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% Manually indent a section of text
+\newenvironment{indentedsection}[1]
+{\begin{list}{}
+  {\setlength{\leftmargin}{#1}}
+  \item[]
+}
+{\end{list}}
+
+% Left/right floated/aligned columns
+\newcommand{\floatcols}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+  #1 &
+  #2 \\
+\end{tabular*}}
+
+% Same, but for the title
+\newcommand{\headercols}[3]
+{\begin{tabular*}{\linewidth}{l c r}
+  #1 &
+  #2 &
+  #3 \\
+\end{tabular*}}
+
+% Holy cow, the word 'C++' is SO UGLY WITHOUT THIS
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% Actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Dan Poggi}}
+
+2900~Northwind~Dr.~Apt.~723\ \ \textbullet
+\ \ East Lansing,~MI~48823-5083
+\\
+(616)~425-9376\ \ \textbullet
+\ \ dan@danpoggi.com
+\end{center}
+
+%\headercols
+%  {2900~Northwind~Dr.~Apt.~723\\East~Lansing,~MI~48823-5083}
+%  {\LARGE \textbf{Dan Poggi}}
+%  {dan@danpoggi.com\\(616)~425-9376}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+  \parskip=0.1em
+
+  \item 
+    \floatcols
+      {\textbf{Michigan State University}}
+      {\textbf{East Lansing, Mich.}}
+    \\
+    \floatcols
+      {\emph{B.S.~Computer Science}}
+      {\emph{September 2009 -- Present}}
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Work Experience}
+
+\begin{itemize}
+  \parskip=0.1em
+
+  \item
+    \floatcols
+      {\textbf{Olark}}
+      {\textbf{Palo Alto, Calif.}}
+    \\
+    \floatcols
+      {\emph{Olark Scaler}}
+      {\emph{June 2011 -- Present}}
+    \begin{itemize*}
+      \item Scaled LIKE A BAUCE
+    \end{itemize*}
+
+  \item
+    \floatcols
+      {\textbf{Michigan State University Physical Plant}}
+      {\textbf{East Lansing, Mich.}}
+    \\
+    \floatcols
+      {\emph{Computer Support Technician}}
+      {\emph{March 2010 -- June 2011}}
+    \begin{itemize*}
+      \item Responsible, along with a team of 12, for the maintenance,
+      support, and growth of a network serving over 1,000 client computers.
+      \item Personally tasked with updating the structure of Microsoft Access
+      databases, scripting using Windows PowerShell, supporting video editing
+      software, and documenting new procedures for use by computer support staff.
+    \end{itemize*}
+
+  \item
+    \floatcols
+      {\textbf{Dan Poggi}}
+      {\textbf{Grand Rapids, Mich.}}
+    \\
+    \floatcols
+      {\emph{Web Developer \& Computer Support Technician}}
+      {\emph{September 2005 -- March 2010}}
+    \begin{itemize*}
+      \item Employed by businesses to produce web sites and services using
+      cutting-edge web technologies.
+      \item Hired by personal clients to diagnose and repair computer problems
+      on Windows and Macintosh operating systems, and deploy new systems
+      involving computers and/or consumer electronics.
+    \end{itemize*}
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Technical Skills}
+
+\begin{indentedsection}{\parindent}
+  \floatcols
+    {Languages:}
+    {Ruby, Objective-C, C, \CPP, Python, JavaScript, PHP, C\#}
+  \\[.4em]
+  \floatcols
+    {Libraries/Frameworks:}
+    {Rails, Sinatra, AppKit, Node.js, ADOdb, Win32~API, .NET CLR}
+  \\[.4em]
+  \floatcols
+    {Tools:}
+    {Vim, TextMate, Xcode, BASH, Git}
+  \\[.4em]
+  \floatcols
+    {Databases:}
+    {SQLite, MySQL, PostgreSQL, Oracle 10g}
+  \\[.4em]
+  \floatcols
+    {Operating Systems:}
+    {Mac OS X, various UNIX platforms, Windows}
+\end{indentedsection}
+
+\end{document}
