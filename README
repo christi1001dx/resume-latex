@@ -1,1 +1,3 @@
-After installing mathdesign (texlive-fonts-extra), you need the URW Garamond package from http://www.ctan.org/pkg/urw-garamond
+In order to compile this, you'll need the mathdesign package (part of texlive-fonts-extra on MacPorts),
+and URW Garamond (http://www.ctan.org/pkg/urw-garamond). Once URW Garamond is installed, don't forget to
+update the filename database with `mktexlsr`.
