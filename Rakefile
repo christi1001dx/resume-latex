@@ -7,6 +7,6 @@ end
 
 task :clean do
   ['*.log', '*.aux', '*.pdf'].each do |glob|
-    Dir.glob(glob) {|file| puts "Deleting #{file}..."; File.delete file}
+    Dir.glob(glob) { |file| puts "Deleting #{file}..."; File.delete file }
   end
 end
